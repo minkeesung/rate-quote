@@ -1,12 +1,14 @@
 import qs from 'qs'
-import { FETCH_RATES, ERROR } from './types'
+import { FETCH_RATES } from './types'
 
 const API_URL = 'https://ss6b2ke2ca.execute-api.us-east-1.amazonaws.com/Prod/quotes?'
 
 
 export const fetchRates = (loanSize, creditScore, propertyType, occupancy) => dispatch => {
     let h = new Headers();
-    h.append('Authorization', 'RG-AUTH 98f0f281-7f45-4421-afd8-549c621c58cb')
+
+    // insert auth token as the second argument in append function
+    h.append('Authorization', )
 
     const query = qs.stringify({loanSize, creditScore, propertyType, occupancy})
     const API_QUERY_URL = `${API_URL}${query}`
@@ -16,6 +18,6 @@ export const fetchRates = (loanSize, creditScore, propertyType, occupancy) => di
        headers: h,
     })
       .then(response => response.json())
-      .then( data => { dispatch ({type: FETCH_RATES, payload: data }) 
+      .then( data => { dispatch ({type: FETCH_RATES, payload: data })
     } )
 }

@@ -52,7 +52,7 @@ class RatesTable extends Component {
 }
 
 const mapStateToProps = ({rates}) => {
-  console.log(rates)
+
   return (
     { rates }
   )

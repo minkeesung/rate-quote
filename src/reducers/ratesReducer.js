@@ -1,4 +1,4 @@
-import { FETCH_RATES, ERROR } from '../actions/types'
+import { FETCH_RATES} from '../actions/types'
 
 
 export default function(state = null, action){

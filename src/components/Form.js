@@ -57,6 +57,7 @@ class Form extends Component {
           </div>
           <div className="col-4">
             <input
+              id="loanSizeInput"
               name="loanSize"
               type="string"
               value={this.state.loanSize}
