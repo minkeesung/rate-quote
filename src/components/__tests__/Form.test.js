@@ -23,8 +23,6 @@ describe('the form inputs', () => {
       target: { value: '10000'}
     })
 
-    wrapped.setState({ loanSize: '10000'})
-
     wrapped.update()
   })
 
